@@ -13,7 +13,7 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     dependent: :destroy
 
-  has_many :responses
+  has_many :responses,
     class_name: 'Response',
     foreign_key: :respondent_id,
     dependent: :destroy
